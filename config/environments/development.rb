@@ -6,6 +6,10 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  # Configure Action Cable
+  config.action_cable.url = "ws://localhost:3000/websockets"
+  config.action_cable.disable_request_forgery_protection = true
+
   # Do not eager load code on boot.
   config.eager_load = false
 
