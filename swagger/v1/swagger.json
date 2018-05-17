@@ -1,0 +1,102 @@
+{
+  "swagger": "2.0",
+  "basePath": "/api",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/chatrooms": {
+      "get": {
+        "summary": "List all chatrooms",
+        "tags": [
+          "Chatrooms"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        }
+      }
+    },
+    "/chatrooms/{id}": {
+      "get": {
+        "summary": "Retrieves a chatroom",
+        "tags": [
+          "Chatrooms"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "chatroom found"
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "summary": "List all users",
+        "tags": [
+          "Users"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        }
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "summary": "Retrieves a user",
+        "tags": [
+          "Users"
+        ],
+        "produces": [
+          "application/vnd.api+json"
+        ],
+        "consumes": [
+          "application/vnd.api+json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "user found"
+          }
+        }
+      }
+    }
+  }
+}
