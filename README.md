@@ -1,24 +1,21 @@
-# README
+# Chat Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the Ruby on Rails code for a chat application
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+Make sure you seed the database to create some chatrooms
 
-* System dependencies
+## API
 
-* Configuration
+The API is [JSONAPI](http://jsonapi.org/) compliant
 
-* Database creation
+## API Documentation
 
-* Database initialization
+Swagger API documentation can be found at /api-docs
 
-* How to run the test suite
+Make sure to run
 
-* Services (job queues, cache servers, search engines, etc.)
+```rake rswag:specs:swaggerize```
 
-* Deployment instructions
-
-* ...
+to get the latest swagger file
