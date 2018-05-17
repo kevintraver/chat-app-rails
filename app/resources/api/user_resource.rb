@@ -4,4 +4,16 @@ class Api::UserResource < JSONAPI::Resource
 
   attributes :username, :online
 
+  filter :online,
+    verify: ->(values, context) {
+      return ActiveModel::Type::Boolean.new.cast(values[0])
+    },
+    apply: -> (records, value, options) {
+      if value
+        records.where(online: true)
+      else
+        records.where(online: false)
+      end
+    }
+
 end
